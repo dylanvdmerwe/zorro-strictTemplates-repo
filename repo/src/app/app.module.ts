@@ -8,14 +8,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { en_US, NZ_I18N } from 'ng-zorro-antd/i18n';
 import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NzSelectModule } from 'ng-zorro-antd/select';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TestWrapperComponent } from './component/test-wrapper/test-wrapper.component';
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TestWrapperComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,8 @@ registerLocaleData(en);
     HttpClientModule,
     BrowserAnimationsModule,
     NzModalModule,
-    NzButtonModule
+    NzButtonModule,
+    NzSelectModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
